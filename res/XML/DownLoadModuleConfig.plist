@@ -1,0 +1,69 @@
+<!--
+	此处配置为资源加载模块下载配置，如果不需要下载某个资源，直接注释掉相应的键值对即可
+
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!--lua代码-->
+	<key>2000</key>
+	<array>
+		<!--模块下载初始状态，基本都是0，这个值不用动-->
+		<string>0</string>
+		<!--模块资源包名称-->
+		<string>src.zip</string>
+		<!--模块资源相对路径-->
+		<string>src.zip</string>
+		<!--模块下载优先级-->
+		<string>0</string>
+		<!--模块名称-->
+		<string>src</string>
+		<!--是否为lua模块0是false，1是true-->
+		<string>1</string>
+	</array>
+
+	<!--通用资源-->
+	<key>2001</key>
+	<array>
+		<string>0</string>
+		<string>commonRes.zip</string>
+		<string>res.zip</string>
+		<string>1</string>
+		<string>commonRes</string>
+		<string>1</string>
+	</array>
+
+	<!--游戏资源-->
+	<key>2004</key>
+	<array>
+		<string>0</string>
+		<string>WhippedEgg.zip</string>
+		<string>WhippedEgg.zip</string>
+		<string>6</string>
+		<string>WhippedEgg</string>
+		<string>1</string>
+	</array>
+
+	<!--热更新ID-->
+	<key>9999</key>
+	<array>
+		<string>0</string>
+		<string></string>
+		<string></string>
+		<string>7</string>
+		<string>Guandan,Guandan_ios</string>
+		<string>0</string>
+	</array>
+	<!--整包更新-->
+	<key>10000</key>
+	<array>
+		<string>0</string>
+		<string>Guandan</string>
+		<string>Guandan.zip</string>
+		<string>1</string>
+		<string>Guandan</string>
+		<string>0</string>
+	</array>
+</dict>
+</plist>

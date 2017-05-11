@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- ww platform configuration -->
+<root>
+	<systemitem id="1" name="SoundSystem" desc="声音系统配置">
+		<item id="1" name="ios">
+			<value>mp3</value>
+		</item>
+		<item id="2" name="android">
+			<value>ogg</value>
+			<value>mp3</value>
+			<value>wav</value>
+		</item>
+		
+		<item  id="3" name="win32">
+			<value>mp3</value>
+			<value>wav</value>
+		</item>
+	</systemitem>
+	<systemitem id="2" name="NetSystem" desc="网络系统配置">
+		<item name="SOCKET_SOTIMEOUT">
+			<value>5.0</value>
+		</item>
+		<item name="SOCKET_CHECK_SOTIMEOUT">
+			<value>20.0</value>
+		</item>
+		<item name="HEART_BEAT_DELAY_TIME">
+			<value>10.0</value>
+		</item>
+		<item name="RECIVE_DATA_DELAY_TIME">
+			<value>70.0</value>
+		</item>
+		<item name="HTTP_GETSOCKET_FAIL_COUNT">
+			<value>1</value>
+		</item>
+		<item name="SOCKET_CONNECT_FAIL_COUNT">
+			<value>1</value>
+		</item>
+		<item name="SAVEDATA_SERVERIP">
+			<value>server_ip</value>
+		</item>
+		<item name="SAVEDATA_SERVERPORT">
+			<value>server_port</value>
+		</item>
+		<item name="DEBUG_PRINT">
+			<value>0</value>
+		</item>
+	</systemitem>
+	
+	<systemitem id="3" name="UpgradeSystem" desc="热更系统">
+		<!--整包更新-->
+		<item name="g_SilenceDownload">
+			<value>10000</value>
+		</item>
+		<!--热更模块-->
+		<item name="g_HotUpdateBatchID">
+			<value>9999</value>
+		</item>
+		<!--脚本模块-->
+		<item name="g_LuaGameID">
+		<value>2000</value>
+		</item>
+		<item name="module_const">
+			<value>Guandan</value>
+		</item>
+		<item name="key_hotupdate_subversion">
+		<value>key_hotupdate_subversion_%s</value>
+		</item>
+		<!--lua 热更文件夹的根目录结构-->
+		<item name="luahoteupdate_topdic">
+			<value>Res/</value>
+		</item>
+		<!--lua 整包文件夹根目录-->
+		<item name="luawholepackage_topdic">
+			<value>Res/</value>
+		</item>
+		<!--http://api.wawagame.cn:80/common/luapatchapi.jsp-->
+		<item name="lua_hotupdate_url">
+			<value>http://192.168.10.91:9565/common/luapatchapi.jsp</value>
+		</item>
+		<item name="res_dl_url">
+			<value>http://192.168.10.91:8585/gamesrc/getsrc.jsp</value>
+		</item>
+	</systemitem>
+	<systemitem id="4" name="EventSystem" desc="事件系统">
+		<item name="reLoginTime">
+			<value>30</value>
+		</item>
+		
+	</systemitem>
+		<systemitem id="5" name="EngineSystem" desc="平台系统">
+		<item name="connectType">
+			<value>4g</value>
+		</item>
+		
+	</systemitem>
+</root>
