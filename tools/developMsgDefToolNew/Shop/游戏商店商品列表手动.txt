@@ -1,0 +1,73 @@
+-- 0x110b02 = 1116930 = Msg_StoreMagicList_Ret
+-- 游戏商店商品列表
+local Msg_StoreMagicList_Ret_read = function(reciveMsgId, netWWBuffer)
+
+    if type(netWWBuffer) ~= "userdata" then
+       flog("[Wawagame Error] This function value netWWBuffer must a userdata")
+       return
+    end
+
+    -- cclog("Paser msg id -> %d", reciveMsgId)
+    local t_result = {}
+
+    t_result.GameID = netWWBuffer:readInt()
+    t_result.StoreID = netWWBuffer:readInt()
+    local count = netWWBuffer:readShort()
+    local StoreMagicInfos = {}
+    for i=1, count do
+        local t_row1 = {}
+        t_row1.StoreMagicID = netWWBuffer:readInt()
+        t_row1.MagicID = netWWBuffer:readInt()
+        t_row1.Money = netWWBuffer:readInt()
+        t_row1.Name = netWWBuffer:readLengthAndString()
+        t_row1.Description = netWWBuffer:readLengthAndString()
+        t_row1.Introduce = netWWBuffer:readLengthAndString()
+        table.insert(StoreMagicInfos, t_row1)
+    end
+    t_result["StoreMagicInfos"] = StoreMagicInfos
+
+    -- local count = netWWBuffer:readShort()
+    local fids = {}
+    for i=1, count do
+        local t_row1 = {}
+        t_row1.magicCount = netWWBuffer:readInt()
+        t_row1.fid = netWWBuffer:readInt()
+        table.insert(fids, t_row1)
+    end
+    t_result["fids"] = fids
+
+    -- local count = netWWBuffer:readShort()
+    local Expires = {}
+    for i=1, count do
+        local t_row1 = {}
+        t_row1.Expire = netWWBuffer:readLengthAndString()
+        table.insert(Expires, t_row1)
+    end
+    t_result["Expires"] = Expires
+
+    t_result.bankID = netWWBuffer:readInt()
+    -- local count = netWWBuffer:readShort()
+    local marketMoneys = {}
+    for i=1, count do
+        local t_row1 = {}
+        t_row1.marketMoney = netWWBuffer:readInt()
+        table.insert(marketMoneys, t_row1)
+    end
+    t_result["marketMoneys"] = marketMoneys
+
+    -- local count = netWWBuffer:readShort()
+    local dayLimits = {}
+    for i=1, count do
+        local t_row1 = {}
+        t_row1.dayLimit = netWWBuffer:readInt()
+        t_row1.monthLimit = netWWBuffer:readInt()
+        t_row1.buystatus = netWWBuffer:readChar()
+        table.insert(dayLimits, t_row1)
+    end
+    t_result["dayLimits"] = dayLimits
+
+
+    -- ccdump(t_result) --打印table
+
+    return t_result
+end

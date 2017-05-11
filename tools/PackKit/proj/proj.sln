@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Const", "Const\Const.vcxproj", "{7678D18E-2BC6-4F97-9D4F-68F3F9133699}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RenameEa", "RenameEa\Rename.vcxproj", "{53A6A1C2-9FEF-4D69-A309-B21DBC4A6A58}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RenameEx", "RenameEx\RenameEx.vcxproj", "{0ADD2DF0-4C51-4125-8500-6AFFAAD54A96}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7678D18E-2BC6-4F97-9D4F-68F3F9133699}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7678D18E-2BC6-4F97-9D4F-68F3F9133699}.Debug|Win32.Build.0 = Debug|Win32
+		{7678D18E-2BC6-4F97-9D4F-68F3F9133699}.Release|Win32.ActiveCfg = Release|Win32
+		{7678D18E-2BC6-4F97-9D4F-68F3F9133699}.Release|Win32.Build.0 = Release|Win32
+		{53A6A1C2-9FEF-4D69-A309-B21DBC4A6A58}.Debug|Win32.ActiveCfg = Debug|Win32
+		{53A6A1C2-9FEF-4D69-A309-B21DBC4A6A58}.Debug|Win32.Build.0 = Debug|Win32
+		{53A6A1C2-9FEF-4D69-A309-B21DBC4A6A58}.Release|Win32.ActiveCfg = Release|Win32
+		{53A6A1C2-9FEF-4D69-A309-B21DBC4A6A58}.Release|Win32.Build.0 = Release|Win32
+		{0ADD2DF0-4C51-4125-8500-6AFFAAD54A96}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0ADD2DF0-4C51-4125-8500-6AFFAAD54A96}.Debug|Win32.Build.0 = Debug|Win32
+		{0ADD2DF0-4C51-4125-8500-6AFFAAD54A96}.Release|Win32.ActiveCfg = Release|Win32
+		{0ADD2DF0-4C51-4125-8500-6AFFAAD54A96}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

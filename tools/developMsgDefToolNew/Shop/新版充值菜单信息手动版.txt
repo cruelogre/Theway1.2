@@ -1,0 +1,143 @@
+-- 0x640115 = 6553877 = Msg_ShopList_Ret
+-- 新版充值菜单信息
+local Msg_ShopList_Ret_read = function(reciveMsgId, netWWBuffer)
+
+    if type(netWWBuffer) ~= "userdata" then
+       flog("[Wawagame Error] This function value netWWBuffer must a userdata")
+       return
+    end
+
+    -- cclog("Paser msg id -> %d", reciveMsgId)
+    local t_result = {}
+
+    t_result.MneuID = netWWBuffer:readInt()
+    local count = netWWBuffer:readShort()
+    local Items = {}
+    for i=1, count do
+        local t_row1 = {}
+        t_row1.ItemID = netWWBuffer:readInt()
+        t_row1.Name = netWWBuffer:readLengthAndString()
+        t_row1.Icon = netWWBuffer:readLengthAndString()
+        t_row1.Hot = netWWBuffer:readChar()
+        t_row1.CashTpye = netWWBuffer:readChar()
+        t_row1.ChargeType = netWWBuffer:readChar()
+        t_row1.ToUser = netWWBuffer:readChar()
+        t_row1.ChargeCmd = netWWBuffer:readLengthAndString()
+        t_row1.MenuData = netWWBuffer:readLengthAndString()
+        t_row1.MenuFlag = netWWBuffer:readInt()
+        t_row1.Money = netWWBuffer:readInt()
+        t_row1.SP = netWWBuffer:readInt()
+        t_row1.SPServiceID = netWWBuffer:readInt()
+        t_row1.Cash = netWWBuffer:readInt()
+        t_row1.DonateCash = netWWBuffer:readInt()
+        t_row1.MenuKey = netWWBuffer:readLengthAndString()
+        t_row1.Description1 = netWWBuffer:readLengthAndString()
+        t_row1.Description2 = netWWBuffer:readLengthAndString()
+        t_row1.Description3 = netWWBuffer:readLengthAndString()
+        table.insert(Items, t_row1)
+    end
+    t_result["Items"] = Items
+
+    -- local count = netWWBuffer:readShort()
+    local Confirms = {}
+    for i=1, count do
+        local t_row1 = {}
+        t_row1.Confirm = netWWBuffer:readChar()
+        table.insert(Confirms, t_row1)
+    end
+    t_result["Confirms"] = Confirms
+
+    -- local count = netWWBuffer:readShort()
+    local SmsTypes = {}
+    for i=1, count do
+        local t_row1 = {}
+        t_row1.SmsType = netWWBuffer:readShort()
+        t_row1.SmsOrder = netWWBuffer:readLengthAndString()
+        table.insert(SmsTypes, t_row1)
+    end
+    t_result["SmsTypes"] = SmsTypes
+
+    -- local count = netWWBuffer:readShort()
+    local MenuTypes = {}
+    for i=1, count do
+        local t_row1 = {}
+        t_row1.MenuType = netWWBuffer:readChar()
+        t_row1.TMagicID = netWWBuffer:readInt()
+        table.insert(MenuTypes, t_row1)
+    end
+    t_result["MenuTypes"] = MenuTypes
+
+    t_result.ReqType = netWWBuffer:readChar()
+    -- local count = netWWBuffer:readChar()
+    local MCountTables = {}
+    for i=1, count do
+        local t_row1 = {}
+        t_row1.MCount = netWWBuffer:readChar()
+        -- local count2 = netWWBuffer:readChar()
+        local Magics = {}
+        for i=1, t_row1.MCount do
+            local t_row2 = {}
+            t_row2.MagicID = netWWBuffer:readInt()
+            t_row2.MagicName = netWWBuffer:readLengthAndString()
+            t_row2.MagicCount = netWWBuffer:readInt()
+            t_row2.MagicFID = netWWBuffer:readInt()
+            table.insert(Magics, t_row2)
+        end
+        t_row1["Magics"] = Magics
+
+        table.insert(MCountTables, t_row1)
+    end
+    t_result["MCountTables"] = MCountTables
+
+    -- local count = netWWBuffer:readShort()
+    local Discounts = {}
+    for i=1, count do
+        local t_row1 = {}
+        t_row1.Discount = netWWBuffer:readChar()
+        table.insert(Discounts, t_row1)
+    end
+    t_result["Discounts"] = Discounts
+
+    -- local count = netWWBuffer:readShort()
+    local bankIDs = {}
+    for i=1, count do
+        local t_row1 = {}
+        t_row1.bankID = netWWBuffer:readInt()
+        t_row1.sceneID = netWWBuffer:readInt()
+        t_row1.hallID = netWWBuffer:readInt()
+        table.insert(bankIDs, t_row1)
+    end
+    t_result["bankIDs"] = bankIDs
+
+    -- local count = netWWBuffer:readShort()
+    local showTypes = {}
+    for i=1, count do
+        local t_row1 = {}
+        t_row1.showType = netWWBuffer:readChar()
+        table.insert(showTypes, t_row1)
+    end
+    t_result["showTypes"] = showTypes
+
+    -- local count = netWWBuffer:readShort()
+    local showOrders = {}
+    for i=1, count do
+        local t_row1 = {}
+        t_row1.showOrder = netWWBuffer:readInt()
+        table.insert(showOrders, t_row1)
+    end
+    t_result["showOrders"] = showOrders
+
+    -- local count = netWWBuffer:readShort()
+    local buttonTexts = {}
+    for i=1, count do
+        local t_row1 = {}
+        t_row1.buttonText = netWWBuffer:readLengthAndString()
+        table.insert(buttonTexts, t_row1)
+    end
+    t_result["buttonTexts"] = buttonTexts
+
+
+    -- ccdump(t_result) --打印table
+
+    return t_result
+end

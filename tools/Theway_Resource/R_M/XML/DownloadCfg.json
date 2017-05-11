@@ -1,0 +1,39 @@
+{
+  "downloadCfg": [
+   {
+      "2000": {
+        "plistName": "XML/Lua_src.plist",
+        "plistKey": "Lua_src",
+        "dialogTitle": "lua脚本",
+        "dialogDesc1": "",
+        "dialogDesc2": "",
+        "dialogDesc3": "",
+        "dialogDesc4": ""
+      }
+    },
+    {
+      "2001": {
+        "plistName": "XML/Lua_res.plist",
+        "plistKey": "Lua_res",
+        "dialogTitle": "lua大厅和通用资源",
+        "dialogDesc1": "",
+        "dialogDesc2": "",
+        "dialogDesc3": "",
+        "dialogDesc4": ""
+      }
+    },
+   
+    {
+      "2004": {
+        "plistName": "XML/WhippedEgg_res.plist",
+        "plistKey": "WhippedEgg_res",
+        "dialogTitle": "惯蛋游戏资源",
+        "dialogDesc1": "",
+        "dialogDesc2": "",
+        "dialogDesc3": "",
+        "dialogDesc4": ""
+      }
+    }
+	
+  ]
+}

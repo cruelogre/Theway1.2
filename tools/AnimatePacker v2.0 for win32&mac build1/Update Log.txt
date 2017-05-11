@@ -1,0 +1,31 @@
+AnimatePacker v2.0 build1
+2012-6-17
+
+Tool:
+Add:
+#1 To save memory, AnimatePacker support "Trim" and "Allow rotation" features in TexturePacker.
+
+Library:
+Add:
+#1 Support cocos2d-x 2.0
+
+===========================================================================================
+
+AnimatePacker v1.1 build1
+2012-5-17
+
+Tool:
+Add:
+#1 Update icons£¨Jan & BlueKelly Desgin£©
+#2 When you are previewing sprites,you can choose two mode--list mode and icon mode.
+Fix:
+#1 If you don't choose an item in animtionTable, it may crash.
+#2 Because the delay arithmetics of the tools and library are defferent, animation play is slower than expected in actual game. I fixed the problem.£¨Jaskist Report£©
+#3 You copy an animation,but it don't copy FlipX and FlipY.
+#4 If you don't choose an item and click the "Frame",it may crash.
+
+Library:
+Add:
+#1 Support loading xml and plist with relative path.(Jaskist Report)
+Fix:
+#1 When you invoke freeAnimation function,CCAnimation will be free.(Jaskist Report)

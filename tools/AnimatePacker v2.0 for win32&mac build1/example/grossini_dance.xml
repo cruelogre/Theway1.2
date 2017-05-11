@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <plists>
+        <plist>grossini_dance-hd.plist</plist>
+    </plists>
+    <animations>
+        <animation>
+            <name>untitle0</name>
+            <delay>0.3</delay>
+            <flipX>false</flipX>
+            <flipY>false</flipY>
+            <spriteFrame>grossini_dance_01.png</spriteFrame>
+            <spriteFrame>grossini_dance_02.png</spriteFrame>
+            <spriteFrame>grossini_dance_03.png</spriteFrame>
+            <spriteFrame>grossini_dance_04.png</spriteFrame>
+            <spriteFrame>grossini_dance_05.png</spriteFrame>
+            <spriteFrame>grossini_dance_06.png</spriteFrame>
+            <spriteFrame>grossini_dance_07.png</spriteFrame>
+            <spriteFrame>grossini_dance_08.png</spriteFrame>
+            <spriteFrame>grossini_dance_09.png</spriteFrame>
+            <spriteFrame>grossini_dance_10.png</spriteFrame>
+            <spriteFrame>grossini_dance_11.png</spriteFrame>
+            <spriteFrame>grossini_dance_12.png</spriteFrame>
+            <spriteFrame>grossini_dance_13.png</spriteFrame>
+            <spriteFrame>grossini_dance_14.png</spriteFrame>
+        </animation>
+    </animations>
+</root>

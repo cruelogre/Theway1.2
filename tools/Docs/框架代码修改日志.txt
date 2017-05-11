@@ -1,0 +1,11 @@
+2015/11/17
+
+Sam:
+1、还原对NetWorkBridge修改
+
+
+-------------------------------------------------
+2015/11/16
+
+Sam:
+1、function NetWorkBridge:send(sendMsgID, tParams)取消对tParams的限制，可以为非table，提高可扩展性。
